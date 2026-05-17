@@ -1,0 +1,22 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Світлий сірий фон */
+  color: #333;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Змінили з center на flex-start, щоб притиснути до верху */
+  padding-top: 40px; /* Додали трохи відступу від хедера, щоб не прилипало впритул */
+}
