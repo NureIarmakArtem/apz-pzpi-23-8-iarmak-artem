@@ -1,0 +1,122 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  en: {
+    translation: {
+      "login_title": "Authorization",
+      "username": "Login",
+      "password": "Password",
+      "sign_in": "Sign In",
+      "error_auth": "Invalid credentials. Check login/password.",
+      "logout": "Logout",
+      "privacy": "Privacy Policy",
+      "status_offline": "Offline",
+      "status_online": "Online",
+      "my_orders": "My Orders",
+      "no_orders": "No active orders.",
+      "order_number": "Order №",
+      "address": "Address",
+      "status": "Status",
+      "complete_order": "Complete Order",
+      "success_delivery": "Delivered successfully!",
+      "turn_on_online_msg": "Turn on Online mode to receive orders.",
+      "admin_panel": "Administrator Panel",
+      "tab_couriers": "Couriers",
+      "tab_orders": "Orders",
+      "tab_system": "System",
+      "register_courier": "Register New Courier",
+      "full_name": "Full Name",
+      "phone": "Phone",
+      "create_btn": "Create",
+      "couriers_list": "Couriers List",
+      "actions": "Actions",
+      "fire_btn": "Fire",
+      "create_order": "Create Order",
+      "client_address_placeholder": "Client Address (e.g. Kharkiv, Sumska 1)",
+      "add_to_db_btn": "Add to DB",
+      "assign_order": "Assign Order",
+      "select_order": "Select Order (New only)",
+      "select_courier": "Select Courier (Active only)",
+      "assign_btn": "Assign",
+      "all_orders": "All Orders",
+      "courier_id": "Courier ID",
+      "system_management": "System Management",
+      "export_db": "Export DB Data",
+      "create_backup": "Create Backup",
+      "stats_json": "Statistics (JSON)",
+      "loading": "Loading...",
+      "success": "Success",
+      "error": "Error",
+      "confirm_fire": "Are you sure you want to fire this courier?",
+      "courier_registered_success": "Courier successfully registered!",
+      "order_assigned_success": "Order successfully assigned!",
+      "export_couriers": "Export Couriers",
+      "export_orders": "Export Orders"
+    }
+  },
+  ua: {
+    translation: {
+      "login_title": "Авторизація",
+      "username": "Логін",
+      "password": "Пароль",
+      "sign_in": "Увійти",
+      "error_auth": "Невірний логін або пароль.",
+      "logout": "Вихід",
+      "privacy": "Політика конфіденційності",
+      "status_offline": "Офлайн",
+      "status_online": "Онлайн",
+      "my_orders": "Мої замовлення",
+      "no_orders": "Немає активних замовлень.",
+      "order_number": "Замовлення №",
+      "address": "Адреса",
+      "status": "Статус",
+      "complete_order": "Завершити замовлення",
+      "success_delivery": "Успішно доставлено!",
+      "turn_on_online_msg": "Увімкніть режим Онлайн для отримання замовлень.",
+      "admin_panel": "Панель Адміністратора",
+      "tab_couriers": "Кур'єри",
+      "tab_orders": "Замовлення",
+      "tab_system": "Система",
+      "register_courier": "Реєстрація нового кур'єра",
+      "full_name": "ПІБ",
+      "phone": "Телефон",
+      "create_btn": "Створити",
+      "couriers_list": "Список кур'єрів",
+      "actions": "Дії",
+      "fire_btn": "Звільнити",
+      "create_order": "Створити замовлення",
+      "client_address_placeholder": "Адреса клієнта (напр. Kharkiv, Sumska 1)",
+      "add_to_db_btn": "Додати в базу",
+      "assign_order": "Призначити замовлення",
+      "select_order": "Оберіть замовлення (Тільки нові)",
+      "select_courier": "Оберіть кур'єра (Тільки Active)",
+      "assign_btn": "Призначити",
+      "all_orders": "Всі замовлення",
+      "courier_id": "ID Кур'єра",
+      "system_management": "Керування системою",
+      "export_db": "Експорт даних БД",
+      "create_backup": "Створити Backup",
+      "stats_json": "Статистика (JSON)",
+      "loading": "Завантаження...",
+      "success": "Успіх",
+      "error": "Помилка",
+      "confirm_fire": "Точно звільнити цього кур'єра?",
+      "courier_registered_success": "Кур'єра успішно зареєстровано!",
+      "order_assigned_success": "Замовлення призначено!",
+      "export_couriers": "Експорт кур'єрів",
+      "export_orders": "Експорт замовлень"
+    }
+  }
+};
+
+i18n
+  .use(initReactI18next) // Викидаємо LanguageDetector
+  .init({
+    resources,
+    lng: 'ua', // ЖОРСТКО ставимо українську за замовчуванням
+    fallbackLng: 'ua',
+    interpolation: { escapeValue: false }
+  });
+
+export default i18n;
